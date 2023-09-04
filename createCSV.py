@@ -17,7 +17,7 @@ landmarks = ['class']
 for val in range(1, 33+1): # 33 landmarks in total
     landmarks += ['x{}'.format(val), 'y{}'.format(val), 'z{}'.format(val), 'v{}'.format(val)]
 
-with open('/Users/danielguarnizo/Desktop/Computer Vision /Notes/CSV_files/coords_DL_C.csv', mode='w', newline='') as f:
+with open('CSV_files/coords_DL_C.csv', mode='w', newline='') as f:
     csv_writer = csv.writer(f, delimiter=',', quotechar='"', quoting = csv.QUOTE_MINIMAL)
     csv_writer.writerow(landmarks)
 
@@ -27,7 +27,7 @@ def export_landmark(results, action):
         print(keypoints)
         keypoints.insert(0,action)
 
-        with open('/Users/danielguarnizo/Desktop/Computer Vision /Notes/CSV_files/coords_DL_C.csv', mode='a', newline='') as f:
+        with open('CSV_files/coords_DL_C.csv', mode='a', newline='') as f:
             csv_writer = csv.writer(f, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
             csv_writer.writerow(keypoints)
     except Exception as e:
