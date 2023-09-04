@@ -69,7 +69,7 @@ def Make_Predictions(path_model, ups, downs, webcam):
 
 
                 except Exception as e:
-                    print('VAFFANCULOOOO')
+                    pass
 
                 cv2.imshow('Mediapipe Feed',image)
 
