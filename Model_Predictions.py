@@ -5,7 +5,9 @@ import mediapipe as mp
 import cv2
 import numpy as np
 
-
+landmarks = ['class']
+for val in range(1, 33+1): # 33 landmarks in total
+    landmarks += ['x{}'.format(val), 'y{}'.format(val), 'z{}'.format(val), 'v{}'.format(val)]
 
 def Make_Predictions(path_model, ups, downs, webcam):
     with open(path_model, 'rb') as f:
