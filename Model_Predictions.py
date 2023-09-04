@@ -23,7 +23,7 @@ def Make_Predictions(path_model, ups, downs, webcam):
             
             while cap.isOpened():
                 ret, image = cap.read()
-                # Mirrir image to mak easier the read on the window 
+                # Mirror the image to have a mirror-like visualization 
                 image = cv2.flip(image, 1)
 
                 # Recolor Feed
@@ -47,13 +47,13 @@ def Make_Predictions(path_model, ups, downs, webcam):
                     body_language_class = model.predict(X)[0]
                     body_language_prob = model.predict_proba(X)[0]
                     
-                    if body_language_class in downs and body_language_prob[body_language_prob.argmax()] >= 0.1:
+                    if body_language_class in downs and body_language_prob[body_language_prob.argmax()] >= 0.3:
                         current_stage = body_language_class
-                    elif current_stage in downs and body_language_class in ups and body_language_prob[body_language_prob.argmax()] >= 0.1: # NON RIESCO A LEGGERE
+                    elif current_stage in downs and body_language_class in ups and body_language_prob[body_language_prob.argmax()] >= 0.3:
                         current_stage = body_language_class
                         counter +=1
                 
-                    cv2.rectangle(image, (0,0), (600, 120), (245, 117, 16), -1)
+                    cv2.rectangle(image, (0,0), (600, 120), (201, 148, 56), -1)
 
                     # DISPLAY CLASS
                     cv2.putText(image, 'CLASS', (190, 24), cv2.FONT_HERSHEY_SIMPLEX, 1.0, (0,0,0), 2, cv2.LINE_AA)
