@@ -17,8 +17,6 @@ Figure 2 displays the screen during execution.
 
 [![Watch the video](https://github.com/DanielGuarnizo/Pose-Estimation-for-Fitness-Exercise-Analysis/assets/87019453/bba787a3-0d7d-4b2c-b8d8-5ba489984010)
 
-## WRONG EXECUTION 
-[![Watch the video](https://github.com/DanielGuarnizo/Pose-Estimation-for-Fitness-Exercise-Analysis/assets/87019453/e44a566d-a40c-43da-a65a-3b336e294316)
 
 # 2. METHODOLOGY
 ## 2.1. DATA COLLECTION AND PRE-PROCESSING
